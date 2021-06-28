@@ -3,6 +3,8 @@ project(CMakeSample CXX)
 enable_testing()
 
 add_executable(sample main.cpp)
+target_include_directories(sample PUBLIC ./include)
+target_link_libraries(sample srcA libA)
 
 add_subdirectory(lib)
 add_subdirectory(platforms)
